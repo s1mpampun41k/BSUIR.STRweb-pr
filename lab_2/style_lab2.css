@@ -1,0 +1,15 @@
+td {
+    border: 1px solid black;
+}
+body {
+    background-color: #f0f0f0; /* светло-серый фон */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+.content {
+    width: 1440px;
+    background-color: white; /* цвет фона для контента, можно изменить */
+    padding: 20px; /* отступы внутри контента */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* небольшая тень */
+}
