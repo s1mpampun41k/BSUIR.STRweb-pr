@@ -1,0 +1,115 @@
+html {
+    font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  background: rgb(52, 206, 142);
+  height: 100px;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  line-height: 100px;
+  margin: 0;
+}
+
+button {
+  margin: 50px;
+  font-size: 20px;
+  background-color: red;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  animation: vibrate 0.1s infinite linear;
+  transition: background-color 0.5s ease;
+}
+
+@keyframes vibrate {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(0); }
+  75% { transform: translateX(5px); }
+  100% { transform: translateX(0); }
+}
+
+button:hover {
+  animation: none; 
+  background-color: green; 
+}
+
+a {
+  font-size: 20px;
+  text-decoration: none; 
+  color: black;
+  position: relative; 
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: green;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+a:hover {
+  color: green;
+}
+
+a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.ball {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(34, 182, 180);
+  border-radius: 70%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: drop 1.5s ease-in-out forwards;
+}
+
+@keyframes drop {
+  0% {
+    top: 0;
+    transform: scaleY(1);
+  }
+  50% {
+    top: 90%;
+    transform: scaleY(0.7);
+  }
+  70% {
+    top: 50%;
+    transform: scaleY(1);
+  }
+  100% {
+    top: 90%;
+    transform: scaleY(0.8);
+  }
+}
+
+#myImage {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  max-width: 100%; 
+  max-height: 100vh;
+  object-fit: contain;
+}
+
+#myImage.show {
+  display: block;
+  opacity: 1;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Анимации</title>
+</head>
+<body>
+    <header>
+        <h1>Анимации</h1>
+    </header>
+    <button id="showImageBtn">Click on me</button>
+    <a href="https://www.youtube.com/watch?v=jfCZCoPz8i0">Link to a very important site</a>   
+    <div class="ball"></div>
+
+    <img id="myImage" src="../pictures/maxresdefault.jpg" alt="Описание изображения">
+
+    <script>
+        document.getElementById('showImageBtn').addEventListener('click', function() {
+            const img = document.getElementById('myImage');
+            img.classList.add('show'); // Добавляем класс для показа изображения
+        });
+    </script>
+</body>
+</html>
