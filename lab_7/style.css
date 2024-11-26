@@ -54,13 +54,6 @@ html {
     }
   }
   
-  @media (max-width: 699px){
-    .adaptive {
-      display: flex;
-      flex-direction: column;
-    }
-  }
-  
   article:first-child{
     grid-area: item1;
   }
